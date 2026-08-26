@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>AWS Solutions Architect Adaptive Mock Test</title>
-<meta name="description" content="Free adaptive AWS Certified Solutions Architect Associate (SAA-C03) practice exam. 90-question bank across three difficulty levels with instant explanations, adaptive progression, category analytics and test history." />
+<meta name="description" content="Free adaptive AWS Certified Solutions Architect Associate (SAA-C03) practice exam. 550+ question bank across three difficulty levels with instant explanations, adaptive progression, category analytics and test history." />
 <meta name="robots" content="index, follow" />
 <style>
   :root{
@@ -186,7 +186,7 @@
       <div class="logo">AWS</div>
       <div>
         <h1>Solutions Architect &mdash; Adaptive Mock Test</h1>
-        <div class="sub">SAA-C03 style &middot; 90-question bank &middot; adapts to your score</div>
+        <div class="sub">SAA-C03 style &middot; 550+ question bank &middot; adapts to your score</div>
       </div>
     </div>
   </header>
@@ -299,6 +299,8 @@
   </footer>
 </div>
 
+<!-- Auto-generated 466-question exam-dump bank (merged into BANK below) -->
+<script src="questions-dump.js"></script>
 <script>
 /* =========================================================================
    AWS Solutions Architect – Adaptive Mock Test
@@ -599,6 +601,11 @@ const QUESTIONS_PER_TEST = 20;
 const UP_THRESHOLD = 70;   // >= => level up
 const DOWN_THRESHOLD = 50; // <  => level down
 const STORE_KEY = "aws_saa_mock_v1";
+
+/* Merge the auto-generated exam-dump questions into the hand-written bank. */
+if (typeof DUMP_BANK !== "undefined"){
+  LEVELS.forEach(function(l){ if(DUMP_BANK[l]) BANK[l] = BANK[l].concat(DUMP_BANK[l]); });
+}
 
 /* ---------- STATE ---------- */
 let state = load();          // { level, history:[] }

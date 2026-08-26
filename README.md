@@ -1,12 +1,14 @@
 # AWS Solutions Architect — Adaptive Mock Test
 
-A free, single-page adaptive practice exam for the **AWS Certified Solutions Architect – Associate (SAA-C03)** exam. No build step, no dependencies — just one `index.html`.
+A free, single-page adaptive practice exam for the **AWS Certified Solutions Architect – Associate (SAA-C03)** exam. No build step, no dependencies — `index.html` plus one generated question file.
 
-**▶ Live site:** _enabled via GitHub Pages (see below)_
+**▶ Live site:** https://dhavalkodrani.github.io/aws-saa-mock-test/
 
 ## Features
 
-- **90-question bank** across 3 difficulty levels (30 each): 🟢 Basic, 🟡 Intermediate, 🔴 Advanced
+- **550+ question bank** across 3 difficulty levels: 🟢 Basic, 🟡 Intermediate, 🔴 Advanced
+  - 90 hand-written questions (30 per level)
+  - 466 questions imported from a community SAA-C03 exam dump (see note below)
 - **Adaptive progression** — after each 20-question test:
   - **≥ 70%** → move **up** a level
   - **50–69%** → **stay** at the current level
@@ -20,9 +22,13 @@ A free, single-page adaptive practice exam for the **AWS Certified Solutions Arc
 - **Keyboard shortcuts** — press `1`–`4` to answer, `←` / `→` to navigate
 - **Mobile-responsive** dark UI
 
+## About the imported questions
+
+`questions-dump.js` is auto-generated from a community SAA-C03 exam dump. The dump provided each **question and its correct answer**, but not the wrong options. For those questions the three distractors were **generated automatically** from the pool of other questions' correct answers — they are plausible AWS solutions but are *not* authoritative, so treat wrong options and explanations as study aids and verify against the official AWS documentation. The 90 hand-written questions have fully authored options and explanations.
+
 ## Run locally
 
-Just open `index.html` in any browser — there is nothing to install.
+Open `index.html` in any browser — there is nothing to install. (Use a simple static server or GitHub Pages if your browser blocks the local `questions-dump.js` include under `file://`.)
 
 ## Deploy on GitHub Pages
 
